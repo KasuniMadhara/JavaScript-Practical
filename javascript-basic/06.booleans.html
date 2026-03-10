@@ -48,6 +48,34 @@
             console.log('You cannot drive');
         }
 
+        console.log(!0); // true
+        console.log(!1); // false
+        console.log('text' / 5); // NaN
+        console.log(!('text' / 5)); // true
+
+        let x;
+        console.log(x); // undefined
+
+        const y = undefined;
+        console.log(y); // undefined
+
+        const result = true? 'yes' : 'no';
+        console.log(result); // yes
+
+        //AND operator
+        console.log(true && true); // true
+        const result2 = 0? 'yes' : 'no';
+        console.log(result2); // yes
+
+        const msg = false && console.log('1.This will not be printed'); // false
+        console.log(msg); // false
+
+        true && console.log('2.This will be printed'); // true
+
+        //OR operator
+        console.log(true || false); // true
+        const result3 = 0 || 'default';
+        console.log(result3); // default
     </script>
 
 </body>
