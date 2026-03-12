@@ -11,8 +11,35 @@
             console.log('hello');
             console.log(2+2);
         }
-
         function1();
+
+        //function with parameter 1
+        function calculateTax(parameter1) {
+            console.log(parameter1 * 0.1);
+        }
+
+        calculateTax(100);
+        calculateTax(1000);
+
+        //function with parameter 2
+        function calculateTwoNumber(a,b) { //we can use two or more parameters in a function
+            console.log(a + b) //we can use a and b inside the function, but not outside the function
+        }
+
+        calculateTwoNumber(5, 10);
+        calculateTwoNumber(20, 30);
+        calculateTwoNumber(40, 50, 60); //ignore the third parameter
+        calculateTwoNumber(40); //NaN because b is undefined
+        calculateTwoNumber(); //NaN because a and b are undefined
+
+        //function with parameter 3
+        function multipleplyTwoNumber(c ,d) {
+            console.log(c);
+        }
+
+        multipleplyTwoNumber(5, 10); //we can pass more arguments than the parameters, but the extra arguments will be ignored
+        
+        
          
        
     </script>
