@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+
+<body>
+
+    
+    <script>
+        function calculatePrice(size, toppings) {
+            if(size === 'small') {
+                price = 800;
+            }else if(size === 'medium') {
+                price = 1000;
+            }else if(size === 'large'){
+                price = 1200;
+            }
+
+            if(toppings.includes('pepperoni')) {
+                price += 200;
+            } else if(toppings.includes('mushrooms')) {
+                price += 150;
+            } else if(toppings.includes('extra cheese')) {
+                price += 100;
+            }
+            return price;
+        }
+        function orderPizza(size, toppings) {
+            const finalPrice = calculatePrice(size, toppings);
+            console.log("🍕 Pizza Order");
+            console.log("Size: " + size);
+            console.log("Toppings: " + toppings);
+            console.log("Total Prize: Rs." +finalPrice);       
+        }
+
+        orderPizza('medium' , 'pepperoni');
+        orderPizza('large' , ['mushrooms' , 'extra cheese']);
+    </script>
+</body>
+</html>
