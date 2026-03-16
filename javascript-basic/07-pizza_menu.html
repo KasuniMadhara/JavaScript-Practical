@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+
+<body>
+
+    <script>
+        function showMenu() {
+    console.log("🍕 Pizza Menu");
+    console.log("1 - Veg Pizza");
+    console.log("2 - Chicken Pizza");
+    console.log("3 - Cheese Pizza");
+}
+
+function orderPizza(choice) {
+    if (choice === 1) {
+        console.log("You ordered Veg Pizza 🍕");
+        console.log("Price: Rs. 900");
+    }
+    else if (choice === 2) {
+        console.log("You ordered Chicken Pizza 🍕");
+        console.log("Price: Rs. 1200");
+    }
+    else if (choice === 3) {
+        console.log("You ordered Cheese Pizza 🍕");
+        console.log("Price: Rs. 1000");
+    }
+    else {
+        console.log("Invalid choice");
+    }
+}
+
+showMenu();
+orderPizza(2);
+           
+    </script>
+</body>
+</html>
