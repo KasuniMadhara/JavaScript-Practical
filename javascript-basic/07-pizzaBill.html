@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+
+<body>
+
+    <script>
+
+        function orderPizza(choice , quantity) {
+            let name ='';
+            let price = 0;
+            if(choice === 1){
+                name = "Veg Pizza";
+                price = 900;
+            }
+            else if(choice === 2){
+                name = "Chicken Pizza";
+                price = 1200;
+            }
+            else if(choice === 3){
+                name = "Cheese Pizza";
+                price = 1000;
+            }else {
+                console.log("Invalid choice");
+                return;
+            }
+
+            let totalBill = price * quantity;
+
+            console.log("🍕 Order Bill");
+            console.log("Pizza: " + name);
+            console.log("Quantity: " + quantity);
+            console.log("Total: Rs." + totalBill);
+        }
+
+        orderPizza(3 , 4)
+    </script>
+</body>
+</html>
