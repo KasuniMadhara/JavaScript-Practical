@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+
+<body>
+
+    <script>
+        //object
+        const product = {
+            name: 'socks', //property
+            price: 1090 //property-value pair
+        };
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'cotton socks'; //change property value
+        console.log(product);
+        
+        product.newProperty = true; //add new property
+        console.log(product);
+
+        delete product.newProperty; //delete property
+        console.log(product);
+
+        console.log(typeof product);
+
+    </script>
+
+</body>
+</html>
