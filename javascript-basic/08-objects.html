@@ -29,6 +29,36 @@
 
         console.log(typeof product);
 
+        const product2 = {
+            name: 'shirt',
+            ['delivery-time']: '5 days', //property name with special characters, must be accessed using bracket notation
+
+            rating: { //nested object
+                stars: 4.5,
+                reviews: 100
+            },
+
+            fun: function function1() { //method
+                console.log('Function inside object is called method');
+            }
+        }
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name']); //another way to access property value
+        //console.log(product2.delivery-time); //undefined, because it is not a valid property name
+        console.log(product2['delivery-time']); //access property value with special characters using bracket notation
+
+        console.log(product2.rating); //access nested object
+        console.log(product2.rating.stars); //access nested object property
+
+        product2.fun(); //call method
+
+        console.log(typeof console.log); //function is a type of object
+
+        //math.random() is a method of Math object that returns a random number between 0 and 1
+
+        
+
     </script>
 
 </body>
