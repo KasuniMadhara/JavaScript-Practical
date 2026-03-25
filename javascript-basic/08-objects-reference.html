@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Reference</title>
+</head>
+
+<body>
+
+    <script>
+       const object1 = {
+            name: 'Kasuni'
+       };
+
+       const object2 = object1; //object2 is a reference to object1, both variables point to the same object in memory
+         console.log(object1.name); //Kasuni
+         console.log(object2.name); //Kasuni
+
+        object1.name = 'Madhara'; //change property value of object1, it also changes the value of object2 because both variables point to the same object in memory
+        console.log(object1.name); //Madhara
+        console.log(object2.name); //Madhara
+
+        const object3 = {
+            name: 'Kasuni'
+       };
+
+       console.log(object3 === object2); //false, because object3 is a different object in memory, even though it has the same property value as object1 and object2
+       console.log(object3 === object1); //false, because object3 is a different object in memory, even though it has the same property value as object1 and object2
+       console.log(object1 === object2); //true, because object1 and object2 point to the same object in memory
+    </script>
+</body>
+</html>
