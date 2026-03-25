@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object shortcut</title>
+</head>
+
+<body>
+
+    <script>
+        const object2 = {
+            name: 'Kasuni',
+            age: 22
+        }
+        console.log(object2.name); //Kasuni
+
+        /*
+        //const name = oject2.name; //object property value is assigned to a variable
+        const {name} = object2; //object destructuring, property value is assigned to a variable with the same name as the property
+        console.log(name); //Kasuni
+        */
+
+        const{name , age} = object2; //object destructuring, multiple property values are assigned to variables with the same name as the properties
+        console.log(name, age); //Kasuni 22
+        console.log(age); //22
+
+        const object5 = {
+            name: name 
+        };
+
+        console.log(object5); //{name: 'Kasuni'} for extra knowledge, object literal shorthand syntax allows us to create an object with properties that have the same name as the variables that hold their values
+        console.log(JSON.stringify(object5)); //{"name": "Kasuni"} for extra knowledge, JSON.stringify() is a method that converts a JavaScript object into a JSON string
+    </script>
+</body>
+</html>
