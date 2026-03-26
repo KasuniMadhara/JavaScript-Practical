@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+
+<body>
+    <button>Hello</button>
+
+    <script>
+        //DOM with title
+        document.title = 'Good JOb!'; //change title of the page
+        console.log(document.title); //console shows the title of the page
+        console.log(typeof document.title); //console shows the type of the title of the page (string)
+
+        //DOM with body
+        console.log(document.body); //console shows the body of the page
+        console.log(typeof document.body); //console shows the type of the body of the page (object)
+
+        //DOM with all web page elements
+        console.log(document.body.innerHTML); //console shows the HTML content of the body of the page
+        document.body.innerHTML = 'Changed'; //change the content of the body element
+        console.log(typeof document.body.innerHTML); //console shows the changed content of the body element
+
+        document.body.innerHTML = '<button> GOOD JOB! </button>'; //change the content of the body element to a button element
+
+        //DOM with element selector
+        console.log(document.querySelector('button')); //console shows the first button element in the page
+        document.querySelector('button').innerHTML = 'Changed'; //change the content of the first button element in the page
+        
+    </script>
+</body>
+</html>
