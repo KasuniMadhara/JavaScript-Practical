@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>DOM projects</title>
@@ -10,23 +11,46 @@
 
     <button onclick="
         subscribe();
-    " 
-    class="js-subscribe-button">
-    Subscribe
-</button>
+    " class="js-subscribe-button">
+        Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost Of Order" class="js-cost-input">
+    <button onclick="
+    calculateTotal();
+">Calculate</button>
+    <p class="js-total-cost"></p>
+
 
     <script>
-            function subscribe() {
-                const buttonElement = document.querySelector('.js-subscribe-button');
-            
-            if(buttonElement.innerText === 'Subscribe'){
+        function calculateTotal() {
+            const inputElement = document.querySelector('.js-cost-input'); //get value of input element
+            let cost = Number(inputElement.value); //convert string value to number using NUmber
+            console.log(cost);
+            console.log(typeof cost);
+
+            if (cost < 40) {
+                cost = cost + 10;
+                console.log(cost);
+            } else {
+                cost = cost + 0;
+            }
+
+            document.querySelector('.js-total-cost').innerHTML = `$${cost}`; //display total cost
+        };
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button');
+
+            if (buttonElement.innerText === 'Subscribe') {
                 buttonElement.innerText = 'Subscribed';
-            }else{
+            } else {
                 buttonElement.innerText = 'Subscribe';
             }
-            }
-        
+        }
+
 
     </script>
 </body>
+
 </html>
