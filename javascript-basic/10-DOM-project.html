@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <title>DOM projects</title>
     <style>
+        body{
+        font-family: Arial;;
+        }
+
         .subscribe-button{
             border:none;
             background-color: black;
@@ -16,12 +20,34 @@
             font-weight: bold;
             border-radius: 50px;
             cursor:pointer;
+            margin-bottom:30px; /*space outside*/
         }
 
         .is-subscribed{
-            background-color: gray;
+            background-color: rgb(240, 240, 240);
             color: black;
         }
+
+        .cost-input{
+            font-size: 15px;
+            /*padding-top:10px;
+            padding-bottom:10px;
+            padding-left:10px; 
+            padding-right:15px;*/
+            padding:10px;
+        }
+
+        .calculate-button{
+            background-color:green ;
+            color: white;
+            border:none;
+            font-size: 15px;
+            padding:12px 15px; /*top and bottom 10px, left and right 15px*/;
+            cursor: pointer;
+
+        }
+
+        
     </style>
 </head>
 
@@ -35,12 +61,12 @@
     </button>
 
     <p>Amazon Shipping Calculator</p>
-    <input placeholder="Cost Of Order" class="js-cost-input" onkeydown="
+    <input placeholder="Cost Of Order" class="js-cost-input cost-input" onkeydown="
         handleCostKeydown(event);
     ">
     <button onclick="
     calculateTotal();
-">Calculate</button>
+" class="calculate-button">Calculate</button>
     <p class="js-total-cost"></p>
 
 
@@ -82,6 +108,7 @@
                 buttonElement.classList.add('is-subscribed'); //add class to element
             } else {
                 buttonElement.innerText = 'Subscribe';
+                buttonElement.classList.remove('is-subscribed'); //remove class from element
             }
         }
 
