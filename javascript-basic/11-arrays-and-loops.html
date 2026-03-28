@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays and Loops</title>
+</head>
+
+<body>
+    
+
+    <script>
+        const myArray = [10, 20, 30];
+        console.log(myArray); //list of values
+        console.log(myArray[0]); //first value
+        myArray[0] = 100;
+        console.log(myArray); //list of values after changing first value
+        console.log(typeof myArray); //object (array is a type of objet)
+
+        const arrayType = [1, 'Kasuni' , true, {name: 'Dinuka'}, [1,2]];
+        console.log(Array.isArray(arrayType)); //true (check if arrayType is an array)
+        console.log(arrayType.length); //5 (number of items in array)
+
+        //add new value to the end of the array
+        arrayType.push(30); //add 30 to the end of the array
+        console.log(arrayType); //list of values after adding 30
+
+        //remove
+        arrayType.splice(0 , 1); //index we want to remove , number of items we want to remove
+        console.log(arrayType); //list of values after removing first item
+
+        </script>
+</body>
+</html>
