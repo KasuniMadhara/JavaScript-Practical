@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM projects</title>
+    <style>
+        .subscribe-button{
+            border:none;
+            background-color: black;
+            color: white;
+            padding-top: 10px; /*space inside*/
+            padding-bottom:10px; /*space inside*/
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor:pointer;
+        }
+
+        .is-subscribed{
+            background-color: gray;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <p>YouTube Subscribe Button</p>
+
+    <button onclick="
+        subscribe();
+    " class="js-subscribe-button subscribe-button">
+        Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost Of Order" class="js-cost-input" onkeydown="
+        handleCostKeydown(event);
+    ">
+    <button onclick="
+    calculateTotal();
+">Calculate</button>
+    <p class="js-total-cost"></p>
+
+
+    <script>
+        String(25)
+        console.log('25' - 5); //convert string to number 
+        console.log('25' + 5); //concatenate string and number, convert number to string
+
+        window.document //
+        window.console.log('window'); //console
+        window.alert //alert
+        window.prompt //prompt
+
+        function handleCostKeydown(event){
+            if(event.key === 'Enter'){
+                calculateTotal();
+            }
+        }
+        function calculateTotal() {
+            const inputElement = document.querySelector('.js-cost-input'); //get value of input element
+            let cost = Number(inputElement.value); //convert string value to number using NUmber
+            console.log(cost);
+            console.log(typeof cost);
+
+            if (cost < 40) {
+                cost = cost + 10;
+                console.log(cost);
+            } else {
+                cost = cost + 0;
+            }
+
+            document.querySelector('.js-total-cost').innerHTML = `$${cost}`; //display total cost
+        };
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button');
+
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerText = 'Subscribed';
+                buttonElement.classList.add('is-subscribed'); //add class to element
+            } else {
+                buttonElement.innerText = 'Subscribe';
+            }
+        }
+
+
+//Event Listeners
+//1. onclick = click
+//2. onkeydown = key press
+//3.onscroll = scrolling
+//4.onmouseenter = mouse hovering over
+//5.onmouseleave = mouse leaving the element(stop hovering over
+//6.oninput = when user input something in input element
+//7.onchange = when user change value of input element and move focus to another element
+
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">    
