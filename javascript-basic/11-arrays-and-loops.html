@@ -53,6 +53,42 @@
         }
          console.log(randomNUmber); //print the random number
 
+        //array with loop
+         const name = [
+            'Kasuni',
+            'Dinuka',
+            'Madhara'
+         ];
+
+         for(let i = 0; i <= name.length; i++) {
+            const value = name[i];
+            console.log(value);
+         }
+
+         //1+ 1+ 3 (accumalator pattern)
+         const num = [ 1, 1, 3];
+         let total = 0;
+
+         for(let i = 0; i < num.length; i++) {
+            const nums = num[i];
+            total += nums;
+         }
+
+         console.log(total);
+
+         //double num = [ 1, 1, 3]; (2, 2, 6)
+         const numbsDoubled = [];
+
+         for(let i =0; i < num.length; i++) {
+            const nums = num[i];
+            numbsDoubled.push(nums * 2);
+         }
+
+         console.log(numbsDoubled);
+
+
+
+
         </script>
 </body>
 </html>
